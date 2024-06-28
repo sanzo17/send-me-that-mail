@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <meta charset="utf-8">
+            <title>Formulaire Profil Météojob</title>
+            <link href="{{ url_for('static', filename='style2.css') }}" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+            <style>
+                .input1, .input2, .submit_button {
+                    border-radius: 12.5px;
+                    border: 1px solid black;
+                    padding: 1.6vb;
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    margin: auto;
+                    width: 24%;
+                }
+
+                .label1 {
+                    margin-top: 10vb;
+                    font-family: "DM Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 2.8vb;
+                }
+
+                .label2 {
+                    margin-top: 10vb;
+                    font-family: "DM Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 2.8vb;
+                }
+                .submit_button {
+                    margin-top: 10vb;
+                    font-family: "DM Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-style: normal;
+                    font-size: 3.2vb;
+                }
+            </style>
+        </head>
+        <body style="background-color:#F6F7F9;">
+            section>
+                <form action="/mail" method="post">
+                    <label class="label1" for="name">Prénom : </label>
+                    <input class="input1" type="text" name="name" id="name" required>
+                    <label class="label2" for="email">Email : </label>
+                    <input class="input2" type="email" name="email" id="email" required>
+                    <input class="submit_button" type="submit" value="Envoyer" />
+                </form>
+            </section>
+        </body>
+    </html>
